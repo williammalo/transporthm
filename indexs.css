@@ -1,0 +1,29 @@
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;text-rendering:optimizeLegibility;position:relative}
+body{margin:0;color:rgba(0,0,0,0.8);line-height:1.8em;font-size:20px}
+ul{margin:0;padding-top:1.8em;padding-bottom:1.8em}
+::selection{background:rgba(180,27,17,0.6)}
+html,body{min-height:100%;font-family:Oswald,sans-serif}
+h1,h2,h3,h4,h5{font-family:Oswald,sans-serif;text-shadow:0 1px 0 #fff,0 -1px rgba(0,0,0,0.2);line-height:1.2em}
+h2{font-size:2em;margin-top:0;margin-bottom:.3em}
+p{margin:0}
+p+p{margin-top:1.8em}
+a{color:#b41b11}
+img{max-width:100%;max-height:100%;border:none}
+.table{display:table;width:100%}
+.cell{display:table-cell;vertical-align:top}
+header{height:250px;background:url("cloud2.jpg") center;overflow:hidden}
+header:after{content:'';position:absolute;top:0;left:0;width:100%;height:250px;background:url("warmtrucky.png") center repeat-y}
+.imbox{height:250px;width:350px;padding:50px;background:#938d88;-webkit-box-shadow:0 0 15px -5px #000;box-shadow:0 0 15px -5px #000}
+.content{display:table;width:100%}
+aside,.column{display:table-cell;vertical-align:top}
+aside{width:350px;z-index:2;-webkit-box-shadow:0 0 15px -5px #000;box-shadow:0 0 15px -5px #000;background:#b8b0aa}
+address{font-style:normal;padding:30px;text-shadow:0 1px 0 rgba(255,255,255,0.2),0 -1px rgba(0,0,0,0.2);}
+address h2{text-shadow:0 1px 0 rgba(255,255,255,0.3),0 -1px rgba(0,0,0,0.2)}
+#map{width:100%;padding-top:62%;margin-top:30px;}
+#map iframe{position:absolute;border:none;-webkit-box-shadow:0 2px 13px -4px #000;box-shadow:0 2px 13px -4px #000;width:100%;height:100%;top:0;left:0;bottom:0;right:0}
+#maplink{display:block;margin-bottom:30px;margin-top:5px;font-size:.6em;text-shadow:none}
+article{min-height:600px;padding:30px 30px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.3);box-shadow:0 0 10px rgba(0,0,0,0.3);z-index:1;background:#f7f3ee;-webkit-column-width:400px;-moz-column-width:400px;column-width:400px;-webkit-column-gap:60px;-moz-column-gap:60px;column-gap:60px;-webkit-column-rule:solid 1px rgba(0,0,0,0.1);-moz-column-rule:solid 1px rgba(0,0,0,0.1);column-rule:solid 1px rgba(0,0,0,0.1)}
+@media screen and (max-width: 900px){header:after{-webkit-background-size:cover;-moz-background-size:cover;background-size:cover}
+.content,aside,article{display:inline-block;width:100%}
+aside,article{padding:40px}
+}
