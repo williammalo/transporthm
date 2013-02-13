@@ -1,0 +1,44 @@
+<?php ob_start("ob_gzhandler"); ?>
+doctype html
+meta(charset="utf-8")
+title Transport HM
+<link href='http://fonts.googleapis.com/css?family=Oswald:300,700' rel='stylesheet' type='text/css'>
+link(rel="stylesheet",href="indexs.css")
+//if lt IE 9
+	script(src="ie9.js")
+	script(src="mediaqueries.js")
+	link(rel="stylesheet", href="ie.css")
+<body>
+.table
+	header.cell
+	.imbox.cell
+		<img src=logo.png>
+.content
+	article
+		h2 Lorem ipsum dolor sit amet, consectetur
+		p Lorem ipsum anim nostrud irure velit esse Duis ex nisi pariatur deserunt ea voluptate tempor aute eu sit nulla culpa est sit laborum adipisicing magna do adipisicing Duis deserunt mollit ut aliquip labore pariatur veniam pariatur consequat velit id Duis occaecat Ut officia aliquip eu laboris magna aliqua. 
+		.table
+			ul.cell
+				li Lorem 
+				li Ipsum 
+				li Dolor 
+				li sit
+			ul.cell
+				li Lorem 
+				li Ipsum 
+				li Dolor 
+				li sit
+		p Lorem ipsum anim nostrud irure velit esse Duis ex nisi pariatur deserunt ea voluptate tempor aute eu sit nulla culpa est sit laborum adipisicing magna do adipisicing Duis deserunt mollit ut aliquip labore pariatur veniam pariatur consequat velit id Duis occaecat Ut officia aliquip eu laboris magna aliqua. 
+		p Duis eget velit vel odio porttitor volutpat. Praesent lectus sem, hendrerit ac porttitor a, posuere nec felis. Vestibulum vestibulum condimentum urna, eget vulputate mauris auctor nec. Nulla nulla sapien, blandit dignissim rhoncus at, dictum a eros. In dignissim, leo in ultricies pulvinar, purus mauris posuere enim, ultricies posuere leo enim ut sem. Maecenas at justo non ipsum vulputate aliquet sit amet sed sem. Maecenas sodales, nisl a dictum sollicitudin, eros orci vulputate mauris, at sodales elit mi id nibh. Vivamus at lectus at tortor lacinia accumsan. 
+	aside
+		address
+			h2 Contact:
+			| <span style="vertical-align:baseline">☎ (123) 456-7890<br>
+			| <span style="font-size:1.6em;top:6px">✉</span> info@HM.com
+			#map
+				<iframe src="https://maps.google.com/?ie=UTF8&amp;ll=37.062301,-95.677185&amp;spn=0.096162,0.144196&amp;t=m&amp;z=13&amp;output=embed"></iframe>
+			a#maplink(href="http://googlemap") View larger map
+			| 1234 streetname<br>
+			| city name<br>
+			| Quebec Ca.
+			a
