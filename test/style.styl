@@ -1,5 +1,5 @@
 
-@import '../lib/nib'
+@import '../../../lib/nib'
 
 retina="(-o-min-device-pixel-ratio: 5/4),(-webkit-min-device-pixel-ratio: 1.25),(min-resolution: 120dpi)"
 brand=#0c3f8c
@@ -49,7 +49,7 @@ img
 		max-width:none
 		width:auto
 img,.img,#map
-	box-shadow:0 0 5px rgba(#000,0.2)
+	//box-shadow:0 0 5px rgba(#000,0.2)
 html
 	overflow-y: scroll
 	font-family:Ubuntu, sans-serif
@@ -92,7 +92,6 @@ section:nth-of-type(2n)
 
 header
 	width:100%
-	font-size:0
 	top:0
 	left:0
 	background-size:100%
@@ -101,6 +100,7 @@ header
 	z-index:-5
 	pointer-events:none
 	margin:0 //ie8 fix
+	margin-bottom:3.7em
 	&:after
 		content:""
 		display:block
@@ -133,11 +133,11 @@ canvas
 
 nav
 	text-align:center
-	padding:0.62em
 	background: brand //linear-gradient(lighten(#0c3f8c,10%),#0c3f8c)
 	border-top:solid 1px lighten(@background,10%)
 	border-bottom:solid 1px darken(@background,10%)
 	left:0
+	top:0
 	width:100%
 	position:absolute
 	z-index:100 //mobile webkit bug
@@ -145,19 +145,36 @@ nav
 	line-height:1em
 	font-size:1.62em
 	margin:0 //ie8 fix
-	@media screen and (max-width: 780px)
-		font-size:4vw
+	margin-top:14%
+	@media screen and (max-width: 650px)
+		font-size:3vw
 	a
-		margin:0 4%
 		color:#fff
 		text-decoration:none
+		display:inline-block
+		padding:0.62em 4%
+
+#contact:target~nav a:nth-child(1):after
+#about:target~nav a:nth-child(2):after
+#services:target~nav a:nth-child(3):after
+		content:""
+		display:block
+		width:0
+		height:0
+		position:absolute
+		bottom:-.9em
+		left: 50%
+		margin-left:-.5em
+		border:solid .5em transparent
+		border-top-color:brand
+
 .fixed
 	position:fixed
 	top:0
+	margin:0
 .absolute
 	position:absolute
-#contact
-	padding-top:5.2em
+
 #contact .rightcol
 	text-align:center
 #map
@@ -204,4 +221,3 @@ address
 	left:0
 	width:100%
 	height:100%
-

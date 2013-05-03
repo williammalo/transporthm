@@ -10,7 +10,6 @@ ul{padding-left:1em}
 img{max-width:100%;border:none}
 .img{width:100%;overflow:hidden;}
 .img img{height:100%;min-width:100%;max-width:none;width:auto}
-img,.img,#map{-webkit-box-shadow:0 0 5px rgba(0,0,0,0.2);box-shadow:0 0 5px rgba(0,0,0,0.2)}
 html{overflow-y:scroll;font-family:Ubuntu,sans-serif;color:rgba(0,0,0,0.8);line-height:1.5em;font-size:16px;}
 @media screen and (min-width: 960px){html{font-size:18px}
 }@media screen and (min-width: 1300px){html{font-size:20px}
@@ -24,22 +23,22 @@ section:nth-of-type(2n){background:#eee}
 .rightcol{padding-left:.75em}
 @media screen and (max-width: 600px){.leftcol,.rightcol{padding:0;width:100%}
 .leftcol{padding-bottom:1.5em}
-}header{width:100%;font-size:0;top:0;left:0;-webkit-background-size:100%;-moz-background-size:100%;background-size:100%;line-height:0;-webkit-transform:translateZ(1px);z-index:-5;pointer-events:none;margin:0;}
+}header{width:100%;top:0;left:0;-webkit-background-size:100%;-moz-background-size:100%;background-size:100%;line-height:0;-webkit-transform:translateZ(1px);z-index:-5;pointer-events:none;margin:0;margin-bottom:3.7em;}
 header:after{content:"";display:block;padding-top:12%;padding-top:14%}
 h1{position:absolute;top:0;right:0;margin:0;height:0;line-height:0;font-size:0;padding-top:14%;width:50%;background:url("http://farm9.staticflickr.com/8232/8470096105_7a4d65ac2f_o.png") center no-repeat;-webkit-background-size:40%;-moz-background-size:40%;background-size:40%;-webkit-transform:translateZ(1px);}
 @media (-o-min-device-pixel-ratio: 5/4),(-webkit-min-device-pixel-ratio: 1.25),(min-resolution: 120dpi){h1{background:url("http://farm9.staticflickr.com/8101/8471190546_bec8bfe578_o.png") center no-repeat;-webkit-background-size:40%;-moz-background-size:40%;background-size:40%}
 }canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}
-nav{text-align:center;padding:.62em;background:#0c3f8c;border-top:solid 1px #0f4ead;border-bottom:solid 1px #0b397e;left:0;width:100%;position:absolute;z-index:100;-webkit-transform:translateZ(1px);line-height:1em;font-size:1.62em;margin:0;}
-@media screen and (max-width: 780px){nav{font-size:4vw}
-}nav a{margin:0 4%;color:#fff;text-decoration:none}
-.fixed{position:fixed;top:0}
+nav{text-align:center;background:#0c3f8c;border-top:solid 1px #0f4ead;border-bottom:solid 1px #0b397e;left:0;top:0;width:100%;position:absolute;z-index:100;-webkit-transform:translateZ(1px);line-height:1em;font-size:1.62em;margin:0;margin-top:14%;}
+@media screen and (max-width: 650px){nav{font-size:3vw}
+}nav a{color:#fff;text-decoration:none;display:inline-block;padding:.62em 4%}
+#contact:target~nav a:nth-child(1):after,#about:target~nav a:nth-child(2):after,#services:target~nav a:nth-child(3):after{content:"";display:block;width:0;height:0;position:absolute;bottom:-.9em;left:50%;margin-left:-.5em;border:solid .5em transparent;border-top-color:#0c3f8c}
+.fixed{position:fixed;top:0;margin:0}
 .absolute{position:absolute}
-#contact{padding-top:5.2em}
 #contact .rightcol{text-align:center}
 #map{width:100%;padding-top:14em;overflow:hidden;background:#fff url("http://farm9.staticflickr.com/8521/8466183038_2a95d88eb0_h.jpg") center;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;}
 @media screen and (max-width: 400px){#map{padding-top:200px}
-}iframe{border:none;width:100%;height:100%;top:0;left:0;position:absolute;opacity:.01;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=1);filter:alpha(opacity=1);-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;-ms-transition:opacity .4s;transition:opacity .4s;-webkit-transform:translateZ(1px);-moz-transform:translateZ(1px);-o-transform:translateZ(1px);-ms-transform:translateZ(1px);transform:translateZ(1px);}
-iframe:hover{opacity:.95;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=95);filter:alpha(opacity=95)}
+}iframe{border:none;width:100%;height:100%;top:0;left:0;position:absolute;opacity:.01;filter:alpha(opacity=1);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";-webkit-transition:opacity .4s;-moz-transition:opacity .4s;-o-transition:opacity .4s;-ms-transition:opacity .4s;transition:opacity .4s;-webkit-transform:translateZ(1px);-moz-transform:translateZ(1px);-o-transform:translateZ(1px);-ms-transform:translateZ(1px);transform:translateZ(1px);}
+iframe:hover{opacity:.95;filter:alpha(opacity=95);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=95)"}
 .ie8 iframe{opacity:1;-ms-filter:none;filter:none}
 address{display:inline-block;width:auto;text-align:left;font-style:normal}
 .ratio-wrap{display:inline-block}
