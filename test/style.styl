@@ -1,8 +1,7 @@
 
-@import '../../../lib/nib'
+@import '../../Dropbox/web/lib/nib'
 
 retina="(-o-min-device-pixel-ratio: 5/4),(-webkit-min-device-pixel-ratio: 1.25),(min-resolution: 120dpi)"
-brand=#0c3f8c
 
 grid(columns, w=1, m=2)
 	display:inline-block
@@ -10,203 +9,100 @@ grid(columns, w=1, m=2)
 	margin:m+0% 0 0 m+0%
 	width:((100%/columns)*w)-((m*(columns+w))/columns)
 
-padding=1.5em
-
-*::selection
-	background:  rgba(brand,0.3)
+::selection
+	background: rgba(0,0,0,0.8)
+	text-shadow: none
+	color: #fff
 
 *
 	box-sizing:     border-box
 	text-rendering: optimizeLegibility
 	position:       relative
 
-h1,h2,h3,h4,h5,h6
-	margin-top:0
-p,ul,h1,h2,h3,h4,h5,h6
-	margin:0
-
-a
-	color:brand
-
-h1
-	font-size: 4.25em
-h2
-	font-size: 2.1em
-	margin-bottom:((1/2.1)*1.5)em
-h3
-	font-size: 1.62em
-ul
-	padding-left:1em
 img
 	max-width: 100%
 	border: none
-.img
-	width:100%
-	overflow:hidden
-	img
-		height:100%
-		min-width:100%
-		max-width:none
-		width:auto
-img,.img,#map
-	//box-shadow:0 0 5px rgba(#000,0.2)
 html
 	overflow-y: scroll
-	font-family:Ubuntu, sans-serif
-	color:rgba(0,0,0,0.8)
-	line-height:1.5em
-	font-size:16px
-	@media screen and (min-width: 960px)
-		font-size:18px
-	@media screen and (min-width: 1300px)
-		font-size:20px
-	@media screen and (min-width: 1400px)
-		font-size:22px
+	font-family: 'Oxygen','Helvetica Neue', sans-serif
+	line-height:1.4em
+	background:#9d1020
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iIzlkMTAyMCI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMjUiIGZpbGw9IiNhYTEwMjAiPjwvcmVjdD4KPHJlY3QgeT0iLTUwIiB3aWR0aD0iOTkiIGhlaWdodD0iMjUiIGZpbGw9IiNhYTEwMjAiPjwvcmVjdD4KPC9nPgo8L3N2Zz4=");
+	//background: linear-gradient(#ccd5de,#70869b)
 body
-	margin:0
+	margin: 0
+	max-width:1010px
+	margin:0 auto
+	background:#fff
+	box-shadow:0 0 10px rgba(#000,.4)
 
 html,body
 	min-height: 100%
 
-section
-	background:#fff
-	padding:padding
+h1,h2,h3,h4,h5
+	font-family:"Titan One"
+	font-weight:300
+	margin-top:0
+	text-transform:capitalize
+h1
+	font-size:2em
+ul
+	padding-left:1.1em
 
-section:nth-of-type(2n)
-	background:#eee
-
-.leftcol,.rightcol
-	width:50%
-	display:inline-block
-	vertical-align:middle
-.leftcol
-	padding-right:(padding/2)
-.rightcol
-	padding-left:(padding/2)
-@media screen and (max-width: 600px)
-	.leftcol,.rightcol
-		padding:0
-		width:100%
-	.leftcol
-		padding-bottom:padding
+a
+	color:#0c3f8c
 
 header
-	width:100%
-	top:0
-	left:0
-	background-size:100%
-	line-height:0
-	-webkit-transform:translateZ(1px)
-	z-index:-5
-	pointer-events:none
-	margin:0 //ie8 fix
-	margin-bottom:3.7em
-	&:after
-		content:""
-		display:block
-		padding-top:12%
-		padding-top:14%
-h1
-	position:absolute
-	top:0
-	right:0
-	margin:0
-	height:0
-	line-height:0
-	font-size:0
-	padding-top:14%
-	width:50%
-	background: url("http://farm9.staticflickr.com/8232/8470096105_7a4d65ac2f_o.png") center no-repeat
-	background-size:40%
-	-webkit-transform:translateZ(1px)
-	@media retina
-		background: url("http://farm9.staticflickr.com/8101/8471190546_bec8bfe578_o.png") center no-repeat
-		background-size:40%
-
-canvas
-	position:absolute
-	top:0
-	left:0
-	width:100%
-	height:100%
-	z-index:-1
-
-nav
 	text-align:center
-	background: brand //linear-gradient(lighten(#0c3f8c,10%),#0c3f8c)
-	border-top:solid 1px lighten(@background,10%)
-	border-bottom:solid 1px darken(@background,10%)
-	left:0
-	top:0
-	width:100%
-	position:absolute
-	z-index:100 //mobile webkit bug
-	-webkit-transform:translateZ(1px) //mobile webkit bug
-	line-height:1em
-	font-size:1.62em
-	margin:0 //ie8 fix
-	margin-top:14%
-	@media screen and (max-width: 650px)
-		font-size:3vw
+	padding:1em
+	background:url("http://farm9.staticflickr.com/8085/8466364514_2c8460e30e_k.jpg")
+	background-size:cover
+header img
+	width:513px
+	-webkit-filter:drop-shadow(0 0 10px #fff)
+	-webkit-transform:translateZ(1px)
+nav
+	background:#0c3f8c
+	text-align:center
 	a
 		color:#fff
+		padding:.7em 3em
 		text-decoration:none
 		display:inline-block
-		padding:0.62em 4%
-
-#contact:target~nav a:nth-child(1):after
-#about:target~nav a:nth-child(2):after
-#services:target~nav a:nth-child(3):after
-		content:""
-		display:block
-		width:0
-		height:0
-		position:absolute
-		bottom:-.9em
-		left: 50%
-		margin-left:-.5em
-		border:solid .5em transparent
-		border-top-color:brand
-
-.fixed
-	position:fixed
-	top:0
-	margin:0
-.absolute
-	position:absolute
-
-#contact .rightcol
-	text-align:center
-#map
-	width:100%
-	padding-top:14em
-	overflow:hidden
-	background:#fff url("http://farm9.staticflickr.com/8521/8466183038_2a95d88eb0_h.jpg") center
-	background-size:cover
-	@media screen and (max-width: 400px)
-		padding-top:200px
-
-iframe
-	border:none
-	width:100%
-	height:100%
-	top:0
-	left:0
-	position:absolute
-	opacity:0.01
-	transition:opacity .4s
-	transform:translateZ(1px)
-	&:hover
-		opacity:0.95
-.ie8 iframe
-	opacity:1
-
-
-address
+main
+	display:block
+article
+	padding:.7em
+	width:50%
 	display:inline-block
-	width:auto
-	text-align:left
-	font-style:normal
+	vertical-align:top
+section
+	padding:.7em
+	background:#fff
+section:nth-child(2n)
+	background:#eee
+section>figure
+	padding:.7em
+	margin:0
+	margin-bottom:.7em
+	width:50%
+	display:inline-block
+	vertical-align:top
+	height:260px
+	overflow:hidden
+	img
+		box-shadow:0 0 5px rgba(#000,.3)
+@media screen and (max-width: 600px)
+	nav a
+		padding:.7em 2em
+@media screen and (max-width: 550px)
+	article
+		width:100%
+	section>figure
+		display:none
+	nav a
+		width:50%
+		display:inline-block
 
 .ratio-wrap
 	display:inline-block
@@ -221,3 +117,4 @@ address
 	left:0
 	width:100%
 	height:100%
+
